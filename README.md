@@ -8,3 +8,5 @@ Players can make crucial decisions such as skipping turns, earning in-game money
 Each choice adds a layer of strategy, making the game more than just a test of luck.
 Buckshot Roulette embodies the essence of suspense and strategy, delivering a unique gaming experience.
 Dive into the world of Buckshot Roulette and bring this thrilling text-based game to life! 
+
+Feel free to fork this project and expand upon it. If you make interesting additions, please consider submitting a pull request!
