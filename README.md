@@ -1,12 +1,18 @@
-Buckshot Roulette is an electrifying text-based game designed for thrill-seekers. This game draws inspiration from the heart-pounding stakes of Russian Roulette.
-In Buckshot Roulette, players engage in a virtual showdown, taking turns pulling the trigger of a digital shotgun. The suspense builds with each turn, knowing that one chamber may hold a "buckshot."
-Survive the round, and you're rewarded with points and a chance to proceed to the next, more challenging round.
+Buckshot Roulette: A Text-Based Thrill
+Buckshot Roulette is a suspense-driven, text-based game inspired by Russian Roulette. Players compete against an AI opponent, Mr. Z, through multiple rounds, using resources like lives, bullets, and power-ups strategically to survive. Between rounds, mini-games offer chances to earn rewards.
 
-Beyond the basic gameplay, Buckshot Roulette offers exciting features that enhance strategy and excitement. 
-Players can make crucial decisions such as skipping turns, earning in-game money, and utilising accessories to improve their odds of survival.
-
-Each choice adds a layer of strategy, making the game more than just a test of luck.
-Buckshot Roulette embodies the essence of suspense and strategy, delivering a unique gaming experience.
-Dive into the world of Buckshot Roulette and bring this thrilling text-based game to life! 
+Game Structure
+Inventory: Tracks player resources, including lives, power-ups, and money, managed through the Inventory structure.
+Mini-Games: Includes Number Guessing, Wire Diffusion, and High-Low Cards, with varying risk and reward levels to help players build their resources.
+Shooting Mechanic: A six-chamber gun with randomized bullet placement adds suspense, and power-ups like skip turn and guaranteed shot influence the outcome.
+Key Functions
+printmp(): Displays file content, used for text-based messages.
+stats(): Shows current stats for both the player and Mr. Z.
+minigame(): Lets players choose and play mini-games.
+shoot1(): Manages shooting actions, determining if a bullet is fired.
+givePowerUps(): Awards power-ups each round.
+gameloop(): Core loop handling rounds, shooting, and win/loss conditions.
+Randomization
+Random elements like bullet placement and mini-game outcomes add unpredictability, enhancing replayability.
 
 Feel free to fork this project and expand upon it. If you make interesting additions, please consider submitting a pull request!
