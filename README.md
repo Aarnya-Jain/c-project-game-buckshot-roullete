@@ -1,8 +1,9 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Buckshot Roulette: A Text-Based Thrill
 
 Buckshot Roulette is a suspense-driven, text-based game inspired by Russian Roulette. Players compete against an AI opponent, Mr. Z, through multiple rounds, using resources like lives, bullets, and power-ups strategically to survive. Between rounds, mini-games offer chances to earn rewards.
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Game Structure
 
@@ -12,7 +13,7 @@ Mini-Games: Includes Number Guessing, Wire Diffusion, and High-Low Cards, with v
 
 Shooting Mechanic: A six-chamber gun with randomized bullet placement adds suspense, and power-ups like skip turn and guaranteed shot influence the outcome.
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Key Functions
 
@@ -28,11 +29,14 @@ givePowerUps(): Awards power-ups each round.
 
 gameloop(): Core loop handling rounds, shooting, and win/loss conditions.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Randomization
 
 Random elements like bullet placement and mini-game outcomes add unpredictability, enhancing replayability.
 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 Feel free to fork this project and expand upon it. If you make interesting additions, please consider submitting a pull request!
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
