@@ -1,4 +1,3 @@
-// study about rand function in full detail to be able to explain there
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
@@ -597,95 +596,104 @@ int main()
 
     printf("Start the game (yes/no): ");
     char input1[INPUT_MAX];
-    fgets(input1, sizeof(input1), stdin);
-    input1[strcspn(input1, "\n")] = 0;
-
-    if (strcasecmp(input1, "yes") == 0)
+    while (8)
     {
-        restart:
-        printmp("boss.txt");
-        printf("\n\n\n");
+        fgets(input1, sizeof(input1), stdin);
+        input1[strcspn(input1, "\n")] = 0;
 
-        printf("Hello there!");
-        printf("\nMy name is Z");
-        printf("\n\nLooks like you are lost.....");
-        printf("\n\nWanna play a quick game with me? (yes/no): ");
-
-        while (1)
+        if (strcasecmp(input1, "yes") == 0)
         {
-            char input[INPUT_MAX];
-            fgets(input, sizeof(input), stdin);
-            input[strcspn(input, "\n")] = 0;
+            break;
+        }
+        else if (strcasecmp(input1, "no") == 0)
+        {
+            printf("Maybe next time. Bye!\n");
+            exit(0);
+        }
+        else
+        {
+            printf("Enter a valid input : ");
+        }
+    }
 
-            if (strcasecmp(input, "yes") == 0)
+restart:
+    printmp("boss.txt");
+    printf("\n\n\n");
+
+    printf("Hello there!");
+    printf("\nMy name is Z");
+    printf("\n\nLooks like you are lost.....");
+    printf("\n\nWanna play a quick game with me? (yes/no): ");
+
+    while (1)
+    {
+        char input[INPUT_MAX];
+        fgets(input, sizeof(input), stdin);
+        input[strcspn(input, "\n")] = 0;
+
+        if (strcasecmp(input, "yes") == 0)
+        {
+            printf("\n\n==================================================================");
+            printf("\nThe rules are simple...");
+            printf("\n\nThere are two guns with six shells in them...");
+            printf("\n\nWe fire at each other, and if you live, you win some money.");
+            printf("\n\nLet's start!");
+            printf("\n\n==================================================================\n\n");
+            gameloop();
+            printf("\n\nRestart the game ? (yes/no) : ");
+            char input2[INPUT_MAX];
+            fgets(input2, sizeof(input2), stdin);
+            input2[strcspn(input2, "\n")] = 0;
+            if (strcasecmp(input2, "yes") == 0)
             {
-                printf("\n\n==================================================================");
-                printf("\nThe rules are simple...");
-                printf("\n\nThere are two guns with six shells in them...");
-                printf("\n\nWe fire at each other, and if you live, you win some money.");
-                printf("\n\nLet's start!");
-                printf("\n\n==================================================================\n\n");
-                gameloop();
-                printf("\n\nRestart the game ? (yes/no) : ");
-                char input2[INPUT_MAX];
-                fgets(input2, sizeof(input2), stdin);
-                input2[strcspn(input2, "\n")] = 0;
-                if (strcasecmp(input2, "yes") == 0)
-                {
-                    goto restart;
-                }
-
-                else if (strcasecmp(input2, "no") == 0)
-                {
-                    break;
-                }
-                else
-                {
-                    printf("Enter a valid input\n");
-                }
-
+                goto restart;
             }
-            else if (strcasecmp(input, "no") == 0)
-            {
-                printf("\n\n==================================================================");
-                printf("\nYou can't escape\n");
-                printf("\n\nThe rules are simple...");
-                printf("\n\nThere are two guns with six shells in them...");
-                printf("\n\nWe fire at each other, and if you live, you win some money.");
-                printf("\n\nLet's start!");
-                printf("\n\n==================================================================\n\n");
-                gameloop();
-                printf("\n\nRestart the game ? (yes/no) : ");
-                char input3[INPUT_MAX];
-                fgets(input3, sizeof(input3), stdin);
-                input3[strcspn(input3, "\n")] = 0;
-                if (strcasecmp(input3, "yes") == 0)
-                {
-                    goto restart;
-                }
 
-                else if (strcasecmp(input3, "no") == 0)
-                {
-                    break;
-                }
-                else
-                {
-                    printf("Enter a valid input\n");
-                }
+            else if (strcasecmp(input2, "no") == 0)
+            {
+                break;
             }
             else
             {
-                printf("\nDON'T ");
-                printf("MESS ");
-                printf("WITH ");
-                printf("ME! ");
-                printf("ENTER A VALID INPUT : ");
+                printf("Enter a valid input\n");
             }
         }
-    }
-    else
-    {
-        printf("Maybe next time. Bye!\n");
+        else if (strcasecmp(input, "no") == 0)
+        {
+            printf("\n\n==================================================================");
+            printf("\nYou can't escape\n");
+            printf("\n\nThe rules are simple...");
+            printf("\n\nThere are two guns with six shells in them...");
+            printf("\n\nWe fire at each other, and if you live, you win some money.");
+            printf("\n\nLet's start!");
+            printf("\n\n==================================================================\n\n");
+            gameloop();
+            printf("\n\nRestart the game ? (yes/no) : ");
+            char input3[INPUT_MAX];
+            fgets(input3, sizeof(input3), stdin);
+            input3[strcspn(input3, "\n")] = 0;
+            if (strcasecmp(input3, "yes") == 0)
+            {
+                goto restart;
+            }
+
+            else if (strcasecmp(input3, "no") == 0)
+            {
+                break;
+            }
+            else
+            {
+                printf("Enter a valid input\n");
+            }
+        }
+        else
+        {
+            printf("\nDON'T ");
+            printf("MESS ");
+            printf("WITH ");
+            printf("ME! ");
+            printf("ENTER A VALID INPUT : ");
+        }
     }
 
     return 0;
