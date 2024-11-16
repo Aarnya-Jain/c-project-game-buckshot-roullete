@@ -359,6 +359,7 @@ void gameloop()
         int *player_current_array;
         int *z_current_array;
 
+        printmp("boss2.txt");
         printf("\n====================\n");
         printf("  ROUND %d STARTING!\n", round);
         printf("====================\n");
@@ -607,7 +608,7 @@ int main()
         }
         else if (strcasecmp(input1, "no") == 0)
         {
-            printf("Maybe next time. Bye!\n");
+            printf("\n\nMaybe next time. Bye!\n\n");
             exit(0);
         }
         else
@@ -617,6 +618,7 @@ int main()
     }
 
 restart:
+    printf("\n");
     printmp("boss.txt");
     printf("\n\n\n");
 
@@ -639,6 +641,7 @@ restart:
             printf("\n\nWe fire at each other, and if you live, you win some money.");
             printf("\n\nLet's start!");
             printf("\n\n==================================================================\n\n");
+
             gameloop();
             printf("\n\nRestart the game ? (yes/no) : ");
             char input2[INPUT_MAX];
@@ -661,12 +664,13 @@ restart:
         else if (strcasecmp(input, "no") == 0)
         {
             printf("\n\n==================================================================");
-            printf("\nYou can't escape\n");
+            printf("\nYou can't escape now....\n");
             printf("\n\nThe rules are simple...");
             printf("\n\nThere are two guns with six shells in them...");
             printf("\n\nWe fire at each other, and if you live, you win some money.");
             printf("\n\nLet's start!");
             printf("\n\n==================================================================\n\n");
+
             gameloop();
             printf("\n\nRestart the game ? (yes/no) : ");
             char input3[INPUT_MAX];
