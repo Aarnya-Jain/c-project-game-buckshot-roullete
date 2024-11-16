@@ -5,7 +5,7 @@
 
 #define INPUT_MAX 300
 
-typedef struct
+typedef struct structure
 {
     int money;
     int skip_turns;
